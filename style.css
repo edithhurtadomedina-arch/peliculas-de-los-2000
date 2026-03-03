@@ -1,0 +1,189 @@
+body{
+    font-family: Verdana, Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffd6ec, #ffeef7);
+    margin: 0;
+    text-align: center;
+    color: #333;
+}
+
+
+header{
+    background: linear-gradient(90deg, hotpink, deeppink);
+    color: white;
+    padding: 25px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+
+header h1{
+    font-size: 40px;
+    text-shadow: 2px 2px 5px #ff69b4;
+}
+
+
+.titulo{
+    color: white;
+    text-decoration: none;
+}
+
+.titulo:hover{
+    text-shadow: 0px 0px 15px white;
+}
+
+
+.container{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+
+section{
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(255,105,180,0.4);
+    transition: 0.4s;
+}
+
+
+section:hover{
+    box-shadow: 0px 0px 25px hotpink;
+}
+
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    background-color: pink;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+li:hover{
+    background-color: hotpink;
+    transform: scale(1.05);
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+a[href="index.html"]{
+    display: inline-block;
+    background-color: deeppink;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+a[href="index.html"]:hover{
+    background-color: hotpink;
+}
+
+
+img{
+    width: 250px;
+    border-radius: 15px;
+    margin: 15px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+    transition: 0.4s;
+}
+
+img:hover{
+    transform: scale(1.08);
+}
+
+
+footer{
+    background-color: deeppink;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(white 2px, transparent 2px),
+        radial-gradient(hotpink 2px, transparent 2px),
+        radial-gradient(#ff69b4 1.5px, transparent 1.5px);
+
+    background-size:
+        120px 120px,
+        180px 180px,
+        90px 90px;
+
+    animation: brillo 8s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes brillo{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-200px);
+    }
+    /* =========================
+   ✨ DESTELLOS ANIMADOS ✨
+========================= */
+
+/* Contenedor de destellos */
+.destellos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Estrella */
+.destello {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 8px white,
+        0 0 15px hotpink,
+        0 0 25px deeppink;
+    animation: parpadeo 2s infinite ease-in-out;
+}
+
+/* Animación */
+@keyframes parpadeo {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+}
